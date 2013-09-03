@@ -192,7 +192,7 @@ public final class GitlabBuildTrigger extends Trigger<AbstractProject<?, ?>> {
         private String _successMessage = "Build finished.  Tests PASSED.";
         private String _unstableMessage = "Build finished.  Tests FAILED.";
         private String _failureMessage = "Build finished.  Tests FAILED.";
-        private boolean _ignoreCertificateErrors = false;
+        private boolean _ignoreCertificateErrors = true;
 
         private transient Gitlab _gitlab;
         private Map<String, Map<Integer, GitlabMergeRequestWrapper>> _jobs;
@@ -229,7 +229,7 @@ public final class GitlabBuildTrigger extends Trigger<AbstractProject<?, ?>> {
             _successMessage = formData.getString("successMessage");
             _unstableMessage = formData.getString("unstableMessage");
             _failureMessage = formData.getString("failureMessage");
-            _ignoreCertificateErrors = formData.getBoolean("ignoreCertificateErrors");
+            _ignoreCertificateErrors = true; // formData.getBoolean("ignoreCertificateErrors");
 
             save();
 
