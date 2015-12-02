@@ -6,6 +6,10 @@ This plugin fetches the source and target branches of a Gitlab merge request and
 to your build via build parameters. Once the build completes, Jenkins will leave a comment on the merge
 request indicating whether the merge request was successful.
 
+## Building
+
+To build the plugin hpi file all you need to do is run the `make` target in the Makefile. Note: requires docker be installed.
+
 ## Prerequisites
 
 * Whilst there is no explicit dependency on the [Git plugin](https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin),
