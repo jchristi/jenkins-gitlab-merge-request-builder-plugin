@@ -31,8 +31,8 @@
     <f:entry title="${%Default failure message}" field="failureMessage">
       <f:textarea default="Build finished.  Tests FAILED."/>
     </f:entry>
-    <f:entry title="${%Ignore SSL Certificate Errors (jchristi: I set this to always enabled)}" field="ignoreCertificateErrors">
+    <!-- <f:entry title="${%Ignore SSL Certificate Errors" field="ignoreCertificateErrors">
       <f:checkbox />
-    </f:entry>
+    </f:entry>-->
   </f:section>
 </j:jelly>
